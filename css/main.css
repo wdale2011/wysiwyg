@@ -1,0 +1,23 @@
+@import 'sidebar.css';
+
+html, body {
+  height: 100%;
+
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding: 15px 25px;
+}
+
+h1 {
+  text-align: center;
+}
