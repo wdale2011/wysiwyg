@@ -1,4 +1,3 @@
-import handleEditorUpdate from './lib/handleEditorUpdate.js';
 import addEditableText from './lib/addEditableText.js';
 
 import Editor from './components/Editor.js';
