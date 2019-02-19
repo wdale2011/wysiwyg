@@ -1,17 +1,24 @@
-import { updateText, updateStyle } from './updateElement.js';
-
 export default function handleEditorUpdate(event) {
-  // get id of element we are targeting
-  const { elementId } = event.currentTarget.dataset;
   // get value of input that was changed
   const { value } = event.target;
   // get style the input targets
   const { style, unit } = event.target.dataset;
+  // get text element we want to modify
+  const textElement = event.currentTarget.parentNode.querySelector('.text-element');
 
   if (style) {
-    updateStyle(elementId, style, value, unit);
+    updateStyle(textElement, style, value, unit);
+    // console.log(event.currentTarget.parentNode.querySelector('.text-element'));
   } else {
     // its a text update
-    updateText(elementId, value);
+    updateText(textElement, value);
   }
+}
+
+function updateStyle(element, style, value, unit = '') {
+  element.style[style] = `${value}${unit}`;
+}
+
+function updateText(element, text) {
+  element.innerText = text;
 }
